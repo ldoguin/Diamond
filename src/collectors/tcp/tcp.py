@@ -183,8 +183,8 @@ import os
 class TCPCollector(diamond.collector.Collector):
 
     PROC = [
-        '/proc/net/netstat',
-        '/proc/net/snmp'
+        '/host_proc/net/netstat',
+        '/host_proc/net/snmp'
     ]
 
     GAUGES = [

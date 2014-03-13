@@ -10,7 +10,7 @@ before graphite will generate the metrics.
 
 #### Dependencies
 
- * /proc/diskstats
+ * /host_proc/diskstats
 
 """
 
@@ -82,8 +82,8 @@ class DiskUsageCollector(diamond.collector.Collector):
         """
         result = {}
 
-        if os.access('/proc/diskstats', os.R_OK):
-            fp = open('/proc/diskstats')
+        if os.access('/host_proc/diskstats', os.R_OK):
+            fp = open('/host_proc/diskstats')
 
             try:
                 for line in fp:

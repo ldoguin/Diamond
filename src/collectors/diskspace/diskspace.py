@@ -122,8 +122,8 @@ class DiskSpaceCollector(diamond.collector.Collector):
           (major, minor) -> FileSystem(device, mount_point)
         """
         result = {}
-        if os.access('/proc/mounts', os.R_OK):
-            file = open('/proc/mounts')
+        if os.access('/host_proc/mounts', os.R_OK):
+            file = open('/host_proc/mounts')
             for line in file:
                 try:
                     mount = line.split()

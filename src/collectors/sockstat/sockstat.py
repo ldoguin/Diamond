@@ -26,7 +26,7 @@ _RE = re.compile('|'.join([
 
 class SockstatCollector(diamond.collector.Collector):
 
-    PROC = '/proc/net/sockstat'
+    PROC = '/host_proc/net/sockstat'
 
     def get_default_config_help(self):
         config_help = super(SockstatCollector, self).get_default_config_help()
